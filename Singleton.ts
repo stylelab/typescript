@@ -1,5 +1,5 @@
 class Singleton {
-	private static _instance:Model = null;
+	private static _instance:Singleton = null;
 
 	constructor() {
 		if(Singleton._instance){
@@ -7,7 +7,7 @@ class Singleton {
 		}
 		Singleton._instance = this;
 	}
-	public static getInstance():Model {
+	public static getInstance():Singleton {
 		if(Singleton._instance === null) {
 			Singleton._instance = new Singleton();
 		}
